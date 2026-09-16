@@ -1,0 +1,8 @@
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { BrowserRouter } from 'react-router-dom';
+import { describe, expect, it } from 'vitest';
+import LoginPage from './LoginPage.jsx';
+import RegisterPage from './RegisterPage.jsx';
+const wrap = (node) => render(<BrowserRouter>{node}</BrowserRouter>);
+describe('identity pages', () => { it('reports invalid credentials', async () => { const user = userEvent.setup(); wrap(<LoginPage />); await user.type(screen.getByLabelText('Username'), 'wrong'); await user.type(screen.getByLabelText('Password'), 'wrong'); await user.click(screen.getByRole('button', { name: 'Login' })); expect(screen.getByRole('alert')).toHaveTextContent('Invalid username or password.'); }); it('rejects unmatched confirmation', async () => { const user = userEvent.setup(); wrap(<RegisterPage />); await user.type(screen.getByLabelText('Display Name'), 'Mina'); await user.type(screen.getByLabelText('Username'), 'mina'); await user.type(screen.getByLabelText('Password'), 'one'); await user.type(screen.getByLabelText('Confirm Password'), 'two'); await user.click(screen.getByRole('button', { name: 'Create account' })); expect(screen.getByRole('alert')).toHaveTextContent('Passwords do not match.'); }); it('registers a user role in local storage', async () => { const user = userEvent.setup(); wrap(<RegisterPage />); for (const [label, value] of [['Display Name','Mina'],['Username','mina'],['Password','one'],['Confirm Password','one']]) await user.type(screen.getByLabelText(label), value); await user.click(screen.getByRole('button', { name: 'Create account' })); expect(JSON.parse(localStorage.getItem('writespace_users'))[0].role).toBe('user'); }); });
