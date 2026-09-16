@@ -1,0 +1,7 @@
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import Avatar from './Avatar.jsx';
+import { formatDate, canManagePost } from '../utils/format.js';
+/** Render a compact post preview with authority-aware edit affordance. */
+export default function BlogCard({ post, index, session }) { const accents = ['border-indigo-500', 'border-violet-500', 'border-pink-500', 'border-teal-500']; return <article className={`border-t-4 ${accents[index % 4]} rounded-lg bg-white p-5 shadow-sm`}><Link to={`/blog/${post.id}`}><h2 className="text-xl font-bold text-slate-800">{post.title}</h2><p className="mt-2 text-slate-600">{post.content.slice(0, 120)}{post.content.length > 120 ? '…' : ''}</p></Link><div className="mt-4 flex items-center justify-between text-sm text-slate-500"><span className="flex items-center gap-2"><Avatar role={post.authorRole || 'user'} small />{post.authorName}</span><span>{formatDate(post.createdAt)}</span></div>{canManagePost(session, post) && <Link className="mt-4 inline-block text-sm font-medium text-indigo-600" to={`/edit/${post.id}`}>Edit</Link>}</article>; }
+BlogCard.propTypes = { post: PropTypes.object.isRequired, index: PropTypes.number.isRequired, session: PropTypes.object, };

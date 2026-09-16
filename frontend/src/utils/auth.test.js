@@ -1,0 +1,3 @@
+import { describe, expect, it } from 'vitest';
+import { ADMIN, clearSession, getSession, setSession } from './auth.js';
+describe('session helpers', () => { it('stores and retrieves a valid session', () => { setSession(ADMIN); expect(getSession()).toEqual(ADMIN); }); it('fails closed for malformed or incomplete sessions', () => { localStorage.setItem('writespace_session', '{bad'); expect(getSession()).toBeNull(); setSession({ username: 'x' }); expect(getSession()).toBeNull(); clearSession(); expect(getSession()).toBeNull(); }); });

@@ -1,0 +1,2 @@
+import { test, expect } from '@playwright/test';
+test('guest discovers WriteSpace and is directed to login to read', async ({ page }) => { const errors = []; page.on('pageerror', (error) => errors.push(error.message)); await page.goto('/'); await expect(page.getByRole('heading', { name: 'WriteSpace' })).toBeVisible(); await expect(page.getByText('No posts yet — check back soon!')).toBeVisible(); await page.getByRole('button', { name: 'Start Reading' }).click(); await expect(page).toHaveURL(/\/login/); expect(errors).toEqual([]); });

@@ -1,0 +1,3 @@
+import { describe, expect, it } from 'vitest';
+import { getPosts, getUsers, savePosts, saveUsers } from './storage.js';
+describe('storage helpers', () => { it('persists posts and users', () => { savePosts([{ id: 'p1' }]); saveUsers([{ id: 'u1' }]); expect(getPosts()).toEqual([{ id: 'p1' }]); expect(getUsers()).toEqual([{ id: 'u1' }]); }); it('returns empty arrays for malformed storage', () => { localStorage.setItem('writespace_posts', '{bad'); localStorage.setItem('writespace_users', '{}'); expect(getPosts()).toEqual([]); expect(getUsers()).toEqual([]); }); });
