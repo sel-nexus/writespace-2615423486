@@ -24,48 +24,21 @@
       "vitest"
     ],
     "1": [
-      "frontend_package_dependencies",
-      "frontend_package_dependencies_prop_types",
-      "frontend_package_dependencies_react",
-      "frontend_package_dependencies_react_dom",
-      "frontend_package_dependencies_react_router_dom",
-      "frontend_package_dependencies_vitejs_plugin_react",
-      "prop_types",
-      "react",
-      "react_dom",
-      "react_router_dom",
-      "vitejs_plugin_react"
-    ],
-    "2": [
-      "frontend_src_pages_landingpage",
-      "frontend_src_pages_landingpage_landingpage",
-      "frontend_src_pages_landingpage_test",
-      "frontend_src_pages_landingpage_test_renderpage",
-      "frontend_src_utils_storage",
-      "frontend_src_utils_storage_getposts",
-      "frontend_src_utils_storage_getusers",
-      "frontend_src_utils_storage_read",
-      "frontend_src_utils_storage_saveposts",
-      "frontend_src_utils_storage_saveusers",
-      "frontend_src_utils_storage_test"
-    ],
-    "3": [
-      "frontend_src_components_avatar",
-      "frontend_src_components_avatar_avatar",
-      "frontend_src_components_blogcard",
-      "frontend_src_components_blogcard_blogcard",
-      "frontend_src_components_userrow",
-      "frontend_src_components_userrow_userrow",
-      "frontend_src_utils_format",
-      "frontend_src_utils_format_canmanagepost",
-      "frontend_src_utils_format_formatdate",
-      "frontend_src_utils_format_usernameavailable"
-    ],
-    "4": [
+      "frontend_src_app",
+      "frontend_src_app_app",
+      "frontend_src_app_placeholder",
       "frontend_src_components_navbar",
       "frontend_src_components_navbar_navbar",
       "frontend_src_components_protectedroute",
       "frontend_src_components_protectedroute_protectedroute",
+      "frontend_src_main",
+      "frontend_src_pages_authpages_test",
+      "frontend_src_pages_authpages_test_renderlogin",
+      "frontend_src_pages_authpages_test_wrap",
+      "frontend_src_pages_loginpage",
+      "frontend_src_pages_loginpage_loginpage",
+      "frontend_src_pages_registerpage",
+      "frontend_src_pages_registerpage_registerpage",
       "frontend_src_utils_auth",
       "frontend_src_utils_auth_admin",
       "frontend_src_utils_auth_clearsession",
@@ -73,8 +46,14 @@
       "frontend_src_utils_auth_setsession",
       "frontend_src_utils_auth_test"
     ],
-    "5": [
+    "2": [
       "frontend_package",
+      "frontend_package_dependencies",
+      "frontend_package_dependencies_prop_types",
+      "frontend_package_dependencies_react",
+      "frontend_package_dependencies_react_dom",
+      "frontend_package_dependencies_react_router_dom",
+      "frontend_package_dependencies_vitejs_plugin_react",
       "frontend_package_name",
       "frontend_package_private",
       "frontend_package_scripts",
@@ -82,198 +61,103 @@
       "frontend_package_scripts_dev",
       "frontend_package_scripts_test",
       "frontend_package_type",
-      "frontend_package_version"
+      "frontend_package_version",
+      "prop_types",
+      "react",
+      "react_dom",
+      "react_router_dom",
+      "vitejs_plugin_react"
     ],
-    "6": [
-      "frontend_index_writespace",
-      "plan_local_first_persistence",
-      "plan_static_vite_react_spa",
-      "plan_vercel_spa_rewrite",
-      "plan_writespace",
-      "readme_plaintext_password_mvp_security"
-    ],
-    "7": [
-      "frontend_src_app",
-      "frontend_src_app_app",
+    "3": [
+      "frontend_src_components_avatar",
+      "frontend_src_components_avatar_avatar",
+      "frontend_src_components_blogcard",
+      "frontend_src_components_blogcard_blogcard",
+      "frontend_src_components_displaycomponents_test",
+      "frontend_src_components_displaycomponents_test_administrator",
+      "frontend_src_components_displaycomponents_test_manageduser",
+      "frontend_src_components_displaycomponents_test_post",
+      "frontend_src_components_displaycomponents_test_renderwithroutes",
+      "frontend_src_components_displaycomponents_test_writer",
       "frontend_src_components_publicnavbar",
       "frontend_src_components_publicnavbar_publicnavbar",
-      "frontend_src_main"
+      "frontend_src_components_userrow",
+      "frontend_src_components_userrow_userrow",
+      "frontend_src_pages_readblog",
+      "frontend_src_pages_readblog_readblog",
+      "frontend_src_utils_format",
+      "frontend_src_utils_format_canmanagepost",
+      "frontend_src_utils_format_formatdate"
     ],
-    "8": [
-      "plan_administrator_operations",
-      "plan_role_based_ownership_enforcement",
-      "plan_writing_workflow",
-      "todos_administration",
-      "todos_writing"
-    ],
-    "9": [
-      "plan_identity_and_guarded_navigation",
-      "plan_permanent_administrator",
-      "todos_identity"
-    ],
-    "10": [
+    "4": [
       "frontend_src_components_statcard",
-      "frontend_src_components_statcard_statcard"
+      "frontend_src_components_statcard_statcard",
+      "frontend_src_pages_admindashboard",
+      "frontend_src_pages_admindashboard_admindashboard",
+      "frontend_src_pages_blogpages_test",
+      "frontend_src_pages_blogpages_test_post",
+      "frontend_src_pages_blogpages_test_session",
+      "frontend_src_pages_blogpages_test_writer",
+      "frontend_src_pages_home",
+      "frontend_src_pages_home_home",
+      "frontend_src_pages_writeblog",
+      "frontend_src_pages_writeblog_writeblog",
+      "frontend_src_utils_storage",
+      "frontend_src_utils_storage_getposts",
+      "frontend_src_utils_storage_getusers",
+      "frontend_src_utils_storage_read",
+      "frontend_src_utils_storage_saveposts",
+      "frontend_src_utils_storage_test"
     ],
-    "11": [
-      "plan_public_discovery",
-      "todos_discovery"
+    "5": [
+      "frontend_src_components_sharedbehavior_test",
+      "frontend_src_components_sharedbehavior_test_ownerpost",
+      "frontend_src_components_sharedbehavior_test_renderguard",
+      "frontend_src_components_sharedbehavior_test_writer",
+      "frontend_src_pages_adminpages_test",
+      "frontend_src_pages_adminpages_test_admin",
+      "frontend_src_pages_adminpages_test_wrap",
+      "frontend_src_pages_usermanagement",
+      "frontend_src_pages_usermanagement_usermanagement",
+      "frontend_src_utils_format_usernameavailable",
+      "frontend_src_utils_storage_saveusers"
     ],
-    "12": [
+    "6": [
+      "frontend_src_pages_landingpage",
+      "frontend_src_pages_landingpage_landingpage",
+      "frontend_src_pages_landingpage_test",
+      "frontend_src_pages_landingpage_test_renderpage"
+    ],
+    "7": [
       "vercel",
       "vercel_rewrites"
     ],
-    "13": [
+    "8": [
+      "frontend_e2e_admin_spec"
+    ],
+    "9": [
+      "frontend_e2e_auth_spec"
+    ],
+    "10": [
+      "frontend_e2e_blogs_spec"
+    ],
+    "11": [
       "frontend_e2e_discovery_spec"
     ],
-    "14": [
+    "12": [
       "frontend_playwright_config"
     ],
-    "15": [
+    "13": [
       "frontend_postcss_config"
     ],
-    "16": [
+    "14": [
       "frontend_src_test_setup"
     ],
-    "17": [
+    "15": [
       "frontend_tailwind_config"
     ],
-    "18": [
+    "16": [
       "frontend_vite_config"
     ]
-  },
-  "cohesion": {
-    "0": 0.09523809523809523,
-    "1": 0.18181818181818182,
-    "2": 0.34545454545454546,
-    "3": 0.4,
-    "4": 0.4222222222222222,
-    "5": 0.2222222222222222,
-    "6": 0.3333333333333333,
-    "7": 0.6,
-    "8": 0.4,
-    "9": 0.6666666666666666,
-    "10": 1.0,
-    "11": 1.0,
-    "12": 1.0,
-    "13": 1.0,
-    "14": 1.0,
-    "15": 1.0,
-    "16": 1.0,
-    "17": 1.0,
-    "18": 1.0
-  },
-  "gods": [
-    {
-      "id": "frontend_src_utils_auth_getsession",
-      "label": "getSession()",
-      "degree": 10
-    },
-    {
-      "id": "frontend_src_components_avatar_avatar",
-      "label": "Avatar()",
-      "degree": 5
-    },
-    {
-      "id": "frontend_src_pages_landingpage_landingpage",
-      "label": "LandingPage()",
-      "degree": 5
-    },
-    {
-      "id": "frontend_src_utils_format_formatdate",
-      "label": "formatDate()",
-      "degree": 5
-    },
-    {
-      "id": "frontend_src_utils_storage_getposts",
-      "label": "getPosts()",
-      "degree": 5
-    },
-    {
-      "id": "frontend_package_scripts",
-      "label": "scripts",
-      "degree": 4
-    },
-    {
-      "id": "frontend_src_components_blogcard_blogcard",
-      "label": "BlogCard()",
-      "degree": 4
-    },
-    {
-      "id": "frontend_src_utils_auth_clearsession",
-      "label": "clearSession()",
-      "degree": 4
-    },
-    {
-      "id": "plan_writespace",
-      "label": "WriteSpace",
-      "degree": 4
-    },
-    {
-      "id": "frontend_src_components_navbar_navbar",
-      "label": "Navbar()",
-      "degree": 3
-    }
-  ],
-  "surprises": [
-    {
-      "source": "WriteSpace Application Entry Document",
-      "target": "WriteSpace",
-      "source_files": [
-        "frontend/index.html",
-        "PLAN.md"
-      ],
-      "confidence": "INFERRED",
-      "relation": "semantically_similar_to",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
-    },
-    {
-      "source": "Discovery Feature Work",
-      "target": "Public Discovery",
-      "source_files": [
-        "todos.yaml",
-        "PLAN.md"
-      ],
-      "confidence": "INFERRED",
-      "relation": "semantically_similar_to",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
-    },
-    {
-      "source": "Identity Feature Work",
-      "target": "Identity and Guarded Navigation",
-      "source_files": [
-        "todos.yaml",
-        "PLAN.md"
-      ],
-      "confidence": "INFERRED",
-      "relation": "semantically_similar_to",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
-    },
-    {
-      "source": "Writing Feature Work",
-      "target": "Reading and Writing Workflow",
-      "source_files": [
-        "todos.yaml",
-        "PLAN.md"
-      ],
-      "confidence": "INFERRED",
-      "relation": "semantically_similar_to",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
-    },
-    {
-      "source": "Administration Feature Work",
-      "target": "Administrator Operations",
-      "source_files": [
-        "todos.yaml",
-        "PLAN.md"
-      ],
-      "confidence": "INFERRED",
-      "relation": "semantically_similar_to",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
-    }
-  ],
-  "tokens": {
-    "input": 0,
-    "output": 0
   }
 }
