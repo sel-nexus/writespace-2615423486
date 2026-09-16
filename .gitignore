@@ -1,0 +1,13 @@
+.engine/
+node_modules/
+dist/
+.env
+.env.*
+!*.env.example
+PLAN.md
+todos.yaml
+test_report.yaml
+developer_metadata.json
+publish_manifest.yaml
+graphify-out/cache/
+graphify-out/cost.json
