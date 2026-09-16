@@ -1,0 +1,6 @@
+import { Link } from 'react-router-dom';
+import BlogCard from '../components/BlogCard.jsx';
+import { getPosts } from '../utils/storage.js';
+import { getSession } from '../utils/auth.js';
+/** List every locally persisted post from newest to oldest. */
+export default function Home() { const session = getSession(); const posts = getPosts().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)); return <main className="mx-auto max-w-6xl px-4 py-12"><div className="flex flex-wrap items-center justify-between gap-4"><div><h1 className="text-3xl font-bold text-slate-800">All Blogs</h1><p className="mt-1 text-slate-500">Words saved in this browser.</p></div><Link className="rounded-lg bg-indigo-600 px-4 py-2 font-medium text-white" to="/write">Write</Link></div>{posts.length ? <section className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{posts.map((post, index) => <BlogCard key={post.id} post={post} index={index} session={session} />)}</section> : <section className="mt-8 rounded-xl bg-slate-50 p-8 text-center"><h2 className="text-xl font-bold text-slate-800">No blogs yet. Be the first to write one!</h2><Link className="mt-4 inline-block text-indigo-600" to="/write">Write a post</Link></section>}</main>; }
