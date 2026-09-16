@@ -1,0 +1,8 @@
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { BrowserRouter } from 'react-router-dom';
+import { describe, expect, it } from 'vitest';
+import AdminDashboard from './AdminDashboard.jsx';
+import UserManagement from './UserManagement.jsx';
+const admin = () => localStorage.setItem('writespace_session', JSON.stringify({ userId: 'default-admin', username: 'admin', displayName: 'Administrator', role: 'admin' }));
+describe('administrator pages', () => { it('summarizes local records', () => { admin(); localStorage.setItem('writespace_posts', JSON.stringify([{ id:'p', title:'Post', authorName:'A', createdAt:'2024-01-01' }])); render(<BrowserRouter><AdminDashboard /></BrowserRouter>); expect(screen.getByText('Total Posts')).toBeInTheDocument(); expect(screen.getByText('Post')).toBeInTheDocument(); }); it('creates a managed account and protects default admin', async () => { admin(); const user = userEvent.setup(); render(<BrowserRouter><UserManagement /></BrowserRouter>); expect(screen.getByTitle('Default admin cannot be deleted.')).toBeDisabled(); await user.type(screen.getByLabelText('Display Name'), 'Eli'); await user.type(screen.getByLabelText('Username'), 'eli'); await user.type(screen.getByLabelText('Password'), 'pass'); await user.click(screen.getByRole('button', { name: 'Create User' })); expect(JSON.parse(localStorage.getItem('writespace_users'))[0].username).toBe('eli'); }); });
